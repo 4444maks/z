@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<title>Макет</title>
+
+</head>
+<body>
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header text"><p>Демократія та глобалізація</p></div>
+
+    <!-- NAV -->
+    <div class="nav">
+        <a href="#hero">Головна</a>
+        <a href="#about">Про</a>
+        <a href="#countries">Країни</a>
+        <a href="#global">Глобалізація</a>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero text" id="hero">
+        <p>ДЕМОКРАТІЯ - політичний режим, за якого єдиним легітимним джерелом влади в державі визнається її народ.</p>
+    </div>
+
+    <!-- TWO COLUMN -->
+   <div class="row" id="about"> <div class="left"> <div class="img small"> <img src="img/63_main-v1751901950.webp" alt=""> </div> <div class="img small"> <img src="img/na-golovnu-demokratiya.jpg" alt=""> </div> </div> <div class="right text big"> <p class="p3">Глобалізація демократії — це процес, у якому демократичні цінності, принципи (права людини, вибори, верховенство права) та інститути поширюються за межі окремих держав і поступово стають спільними для різних країн, що призводить до уніфікації політичних систем у масштабах усього світу. </p> </div> </div>
+
+    <!-- STRIP -->
+    <div class="strip text">
+        <p>Міжнародні актори (організації, транснаціональні компанії) впливають на розвиток демократії та сприяють формуванню глобального громадянського суспільства.</p>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid" id="countries">
+        <div class="card">
+            <div class="img"><img src="img/Flag_of_Canada.png" alt=""></div>
+            <div class="text"><p>Канада — стабільна демократія з конституційною монархією та парламентською системою. Формальний глава — монарх, реальна влада — у прем’єр-міністра та уряду.</p></div>
+        </div>
+        <div class="card">
+            <div class="img"><img src="img/Flag_of_Sweden.svg.png" alt=""></div>
+            <div class="text"><p>Швеція — конституційна монархія з парламентською системою, яка відома стабільністю і високим рівнем участі громадян у політичному житті.</p></div>
+        </div>
+        <div class="card">
+            <div class="img"><img src="img/Flag_of_Denmark.svg.png" alt=""></div>
+            <div class="text"><p>Данія — стабільна парламентська монархія, яка поєднує демократичні цінності з високим рівнем прозорості та соціальної відповідальності.</p></div>
+        </div>
+        <div class="card">
+            <div class="img"><img src="img/Flag_of_Iceland.svg.png" alt=""></div>
+            <div class="text"><p>Ісландія — одна з найстаріших демократій світу, парламентська республіка з багатопартійною системою, Альтинг — найдавніший парламент у світі.</p></div>
+        </div>
+        <div class="card">
+            <div class="img"><img src="img/Flag_of_New_Zealand.svg.png" alt=""></div>
+            <div class="text"><p>Нова Зеландія — стабільна демократія з конституційною монархією та парламентською системою, виконавча влада — уряд на чолі з прем'єр-міністром.</p></div>
+        </div>
+        <div class="card">
+            <div class="img"><img src="img/Flag_of_Switzerland.svg.png" alt=""></div>
+            <div class="text"><p>Швейцарія — федеративна парламентська республіка з високим рівнем демократії, прямим голосуванням громадян та сильною місцевою автономією.</p></div>
+        </div>
+    </div>
+
+    <!-- CONTENT BLOCKS -->
+    <div class="block" id="global">
+        <div class="text">
+            <p>Як <span>глобалізація</span> змінила світ. <span>Кордони</span> стали менш відчутними для <span>капіталу</span>, <span>технологій</span> та <span>інформації</span>. Люди отримали можливість легше <span>подорожувати</span> та <span>спілкуватися</span>, проте виникла залежність від <span>світових криз</span>.</p>
+        </div>
+        <div class="img"><img src="img/6705247.png" alt=""></div>
+    </div>
+    <div class="block">
+        <div class="img"><img src="img/12352199.png" alt=""></div>
+        <div class="text">
+            <p>Вплив <span>міжнародних організацій</span>. Такі структури, як <span>ООН</span>, <span>СОТ</span> або <span>ЄС</span>, диктують <span>глобальні стандарти</span>. Вони сприяють вирішенню <span>конфліктів</span> та можуть обмежувати <span>суверенітет</span> держав.</p>
+        </div>
+    </div>
+    <div class="block">
+        <div class="text">
+            <p>Основним чинником розвитку <span>глобалізації</span> стала <span>науково-технічна революція</span>, особливо <span>Інтернет</span>, який забезпечує миттєвий <span>зв'язок</span> між людьми по всьому світу.</p>
+        </div>
+        <div class="img"><img src="img/5965483.png" alt=""></div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="full text">Сделели Максим Максим Максим Настя</div>
+
+</div>
+
+<script>
+// NAV smooth scroll
+document.querySelectorAll('.nav a').forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+        document.querySelectorAll('.nav a').forEach(l=>l.classList.remove('active'));
+        link.classList.add('active');
+    });
+});
+
+// NAV hover color
+document.querySelectorAll('.nav a').forEach(link => {
+    link.addEventListener('mouseover',()=>{link.style.color="red";});
+    link.addEventListener('mouseout',()=>{link.style.color="";});
+});
+
+// IntersectionObserver для анимации
+const elements = document.querySelectorAll('.block, .card, .hero, .row');
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){entry.target.classList.add('show');}
+    });
+});
+elements.forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
